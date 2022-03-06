@@ -11,11 +11,6 @@ const tag = "timdevs-docker-go"
 func TestBuildsWithoutErrors(t *testing.T) {
 	buildOptions := &docker.BuildOptions{
 		Tags: []string{tag},
-		Architectures: []string{
-			"linux/amd64",
-			"linux/arm64",
-		},
-		Load: true,
 	}
 
 	err := docker.BuildE(t, "..", buildOptions)
