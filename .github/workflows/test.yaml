@@ -11,4 +11,4 @@ jobs:
       - name: Install go binaries...
         run: cd tests && go get all
       - name: Run Tests..
-        run: go test -v
+        run: cd tests && go test -v
