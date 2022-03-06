@@ -7,7 +7,6 @@ jobs:
     container:
       image: tim0git/docker-go:latest
     steps:
-      - name: Checkout branch code...
       - uses: actions/checkout@v2
       - name: Install go binaries...
         run: cd tests && go get all
