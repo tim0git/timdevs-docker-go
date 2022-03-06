@@ -3,7 +3,7 @@ on: [pull_request]
 
 jobs:
   trivy-iac:
-    name: Trivy Config Security Analysis
+    name: Config
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout code
@@ -18,7 +18,7 @@ jobs:
           severity: 'CRITICAL,HIGH,MEDIUM,LOW'
           format: 'table'
   trivy-image:
-    name: Trivy Image Security Analysis
+    name: Image
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout code

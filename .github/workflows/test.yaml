@@ -3,6 +3,7 @@ on: [push, pull_request]
 
 jobs:
   test:
+    name: Docker Terratest
     runs-on: ubuntu-latest
     container:
       image: tim0git/docker-go:latest
