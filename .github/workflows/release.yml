@@ -1,10 +1,9 @@
 name: CI - Release
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  
+    branches:
+      - main
+
 jobs:
   release:
     runs-on: ubuntu-latest
