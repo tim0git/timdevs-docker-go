@@ -1,0 +1,15 @@
+name: CI - Test
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Docker Terratest
+    runs-on: ubuntu-latest
+    container:
+      image: tim0git/docker-go:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install go binaries...
+        run: cd tests && go get all
+      - name: Run Tests..
+        run: cd tests && go test -v
