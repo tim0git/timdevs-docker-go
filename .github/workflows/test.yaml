@@ -1,0 +1,15 @@
+name: CI - Test
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: tim0git/docker-go:latest
+    steps:
+      - name: Checkout branch code...
+      - uses: actions/checkout@v2
+      - name: Install go binaries...
+        run: cd tests && go get all
+      - name: Run Tests..
+        run: go test -v
